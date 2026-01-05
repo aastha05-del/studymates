@@ -1,0 +1,6 @@
+<h2>Your Progress</h2>
+<ul>
+  {% for course, value in progress.items() %}
+    <li>{{ course }} : {{ value }}%</li>
+  {% endfor %}
+</ul>

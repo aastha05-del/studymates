@@ -1,0 +1,25 @@
+{% if course %}
+<h2>{{ course.description }}</h2>
+
+<h3>Topics</h3>
+<ul>
+  {% for t in course.topics %}
+    <li>{{ t.name }}
+      <ul>
+        {% for l in t.links %}
+          <li><a href="{{ l }}" target="_blank">{{ l }}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endfor %}
+</ul>
+
+<h3>Practice Questions</h3>
+<ul>
+  {% for q in questions %}
+    <li>{{ q }}</li>
+  {% endfor %}
+</ul>
+
+<a href="/progress">View Progress</a>
+{% endif %}

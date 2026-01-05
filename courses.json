@@ -1,0 +1,26 @@
+{
+  "Intro to Computer Science": {
+    "description": "Basics of computing, algorithms, and programming",
+    "topics": [
+      {
+        "name": "What is a Computer?",
+        "links": [
+          "https://www.youtube.com/watch?v=O5nskjZ_GoI",
+          "https://nptel.ac.in"
+        ]
+      }
+    ]
+  },
+
+  "Python": {
+    "description": "Python from beginner to advanced level",
+    "topics": [
+      {
+        "name": "Variables & Data Types",
+        "links": [
+          "https://docs.python.org/3/tutorial/"
+        ]
+      }
+    ]
+  }
+}
