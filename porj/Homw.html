@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>StudyMates</title>
+
+  <!-- Brand font -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <!-- Body font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #276CE4;
+      --background: #276CE4;
+      --card: #ffffff;
+      --text-dark: #1f2937;
+      --text-muted: #4b5563;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--background);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* OUTER FRAME */
+    .frame {
+      width: 1200px;
+      padding: 40px;
+    }
+
+    /* WHITE CARD */
+    .card {
+      background: var(--card);
+      border-radius: 28px;
+      padding: 70px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+      position: relative;
+    }
+
+    /* AUTH LINKS */
+    .auth-links {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 14px;
+    }
+
+    .auth-links a {
+      margin-left: 16px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .hero-text {
+      max-width: 480px;
+    }
+
+    /* BRAND */
+    .logo {
+      font-family: "Press Start 2P", monospace;
+      font-size: 32px;
+      color: var(--primary);
+      margin-bottom: 18px;
+      letter-spacing: 1px;
+    }
+
+    /* HEADLINE */
+    .hero-text h1 {
+      font-size: 34px;
+      font-weight: 600;
+      line-height: 1.25;
+      color: var(--text-dark);
+      margin-bottom: 20px;
+    }
+
+    /* BODY TEXT */
+    .hero-text p {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    /* CTA */
+    .cta-buttons {
+      display: flex;
+      gap: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 12px;
+      text-decoration: none;
+      color: white;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .casual {
+      background: #22c55e;
+    }
+
+    .study {
+      background: var(--primary);
+    }
+
+    /* IMAGE */
+    .hero-image img {
+      width: 320px;
+      image-rendering: pixelated;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="frame">
+    <div class="card">
+
+      <!-- AUTH -->
+      <div class="auth-links">
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+
+      <div class="hero">
+
+        <!-- LEFT -->
+        <div class="hero-text">
+          <div class="logo">STUDYMATES</div>
+
+          <h1>
+            Study when you want.<br>
+            Focus when you need.
+          </h1>
+
+          <p>
+            Learn without pressure. Ask questions casually,
+            or switch to focused study with notes and flashcards
+            when you’re ready.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="login.html" class="btn casual">Casual Mode</a>
+            <a href="login.html" class="btn study">Study Mode</a>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="hero-image">
+          <!-- Make sure this path matches your folder -->
+          <img src="images/l.jpg" alt="Study buddy">
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

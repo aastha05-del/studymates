@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | StudyMates</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== GLOBAL THEME ===== */
+    :root {
+      --primary: #276CE4;
+      --background: #ECE6DA;
+      --text-dark: #1f2937;
+      --text-muted: #4b5563;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: var(--background);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* ===== LOGIN LAYOUT ===== */
+    .login-container {
+      width: 900px;
+      height: 500px;
+      background: var(--white);
+      border-radius: 20px;
+      display: flex;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    /* LEFT SIDE */
+    .login-left {
+      width: 50%;
+      background: var(--primary);
+      color: white;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .login-left h1 {
+      font-family: "Press Start 2P", monospace;
+      font-size: 26px;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+
+    .login-left p {
+      font-size: 15px;
+      opacity: 0.95;
+      line-height: 1.6;
+      max-width: 320px;
+    }
+
+    /* RIGHT SIDE */
+    .login-right {
+      width: 50%;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .login-right h2 {
+      margin-bottom: 28px;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      font-size: 14px;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.15s ease;
+    }
+
+    button:hover {
+      opacity: 0.92;
+    }
+
+    .register-link {
+      margin-top: 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .register-link a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="login-container">
+
+    <!-- LEFT -->
+    <div class="login-left">
+      <h1>STUDYMATES</h1>
+      <p>
+        A calm place to study, ask questions,
+        and stay focused without pressure.
+      </p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="login-right">
+      <h2>Login</h2>
+
+      <!-- REAL WIRING -->
+      <form action="dashboard.html">
+        <label>Email</label>
+        <input 
+          type="email" 
+          placeholder="you@example.com" 
+          required>
+
+        <label>Password</label>
+        <input 
+          type="password" 
+          placeholder="••••••••" 
+          required>
+
+        <button type="submit">Login</button>
+      </form>
+
+      <div class="register-link">
+        Don’t have an account?
+        <a href="register.html">Register</a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

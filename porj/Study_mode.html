@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Study Mode | StudyMates</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #276CE4;
+      --background: #276CE4;
+      --card: #ffffff;
+      --panel: #f9fafb;
+      --text-dark: #1f2937;
+      --text-muted: #4b5563;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--background);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .frame {
+      width: 1150px;
+      padding: 40px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 28px;
+      padding: 40px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+    }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    .back {
+      background: none;
+      border: none;
+      color: var(--primary);
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    /* MAIN */
+    .main {
+      display: flex;
+      gap: 24px;
+      min-height: 420px;
+    }
+
+    /* AI PANEL */
+    .ai-panel {
+      flex: 1;
+      background: var(--panel);
+      border-radius: 22px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ai-box {
+      flex: 1;
+      background: white;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      padding: 18px;
+      font-size: 14px;
+      color: var(--text-dark);
+      line-height: 1.6;
+      margin-bottom: 14px;
+      overflow-y: auto;
+    }
+
+    .ask-row {
+      display: flex;
+      gap: 12px;
+    }
+
+    .ask-row input {
+      flex: 1;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    .ask-row input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .ask-row button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    /* NOTES PANEL */
+    .notes {
+      width: 0;
+      overflow: hidden;
+      background: var(--panel);
+      border-radius: 22px;
+      padding: 0;
+      transition: width 0.25s ease, padding 0.25s ease;
+    }
+
+    .notes.open {
+      width: 340px;
+      padding: 22px;
+    }
+
+    .notes textarea {
+      width: 100%;
+      height: 100%;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      padding: 14px;
+      resize: none;
+      font-size: 14px;
+    }
+
+    .notes textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    /* FOOTER ACTIONS */
+    .actions {
+      margin-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .actions button {
+      background: none;
+      border: 1px solid var(--primary); /* SOLID, SAFE */
+      color: var(--primary);
+      padding: 10px 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="frame">
+  <div class="card">
+
+    <div class="header">
+      <div class="title">Study Mode</div>
+      <button class="back" onclick="location.href='dashboard.html'">← Dashboard</button>
+    </div>
+
+    <div class="main">
+
+      <!-- AI PANEL -->
+      <div class="ai-panel">
+        <div class="ai-box">
+          Ask questions related to what you are studying.
+          Explanations will appear here.
+        </div>
+
+        <div class="ask-row">
+          <input type="text" placeholder="Ask a question...">
+          <button>Ask</button>
+        </div>
+      </div>
+
+      <!-- NOTES -->
+      <div class="notes" id="notesPanel">
+        <textarea placeholder="Write your notes here..."></textarea>
+      </div>
+
+    </div>
+
+    <div class="actions">
+      <button onclick="toggleNotes()">Notes</button>
+      <button>Create Flashcard</button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function toggleNotes() {
+    document.getElementById("notesPanel").classList.toggle("open");
+  }
+</script>
+
+</body>
+</html>

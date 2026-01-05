@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register | StudyMates</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #276CE4;
+      --background: #ECE6DA;
+      --text-dark: #1f2937;
+      --text-muted: #4b5563;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: var(--background);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .register-container {
+      width: 900px;
+      height: 540px;
+      background: var(--white);
+      border-radius: 20px;
+      display: flex;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    /* LEFT */
+    .register-left {
+      width: 50%;
+      background: var(--primary);
+      color: white;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .logo {
+      font-family: "Press Start 2P", monospace;
+      font-size: 24px;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    .register-left p {
+      font-size: 15px;
+      opacity: 0.95;
+      line-height: 1.6;
+      max-width: 320px;
+    }
+
+    /* RIGHT */
+    .register-right {
+      width: 50%;
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .register-right h2 {
+      margin-bottom: 26px;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+
+    label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      border: 1px solid #d1d5db;
+      font-size: 14px;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+
+    button:hover {
+      opacity: 0.92;
+    }
+
+    .login-link {
+      margin-top: 20px;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .login-link a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="register-container">
+
+    <!-- LEFT -->
+    <div class="register-left">
+      <div class="logo">STUDYMATES</div>
+      <p>
+        Create an account to organize your learning,
+        ask questions freely, and study at your own pace.
+      </p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="register-right">
+      <h2>Create Account</h2>
+
+      <!-- REAL WIRING -->
+      <form action="dashboard.html">
+        <label>Name</label>
+        <input type="text" placeholder="Your name" required>
+
+        <label>Email</label>
+        <input type="email" placeholder="you@example.com" required>
+
+        <label>Password</label>
+        <input type="password" placeholder="••••••••" required>
+
+        <label>Role</label>
+        <select required>
+          <option value="">Select role</option>
+          <option>Student</option>
+          <option>Admin</option>
+        </select>
+
+        <button type="submit">Create Account</button>
+      </form>
+
+      <div class="login-link">
+        Already have an account?
+        <a href="login.html">Login</a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

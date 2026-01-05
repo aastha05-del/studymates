@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Courses | StudyMates</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #276CE4;       
+      --background: #276CE4;
+      --card: #ffffff;
+      --panel: #fbfcee;
+      --text-dark: #1f2937;
+      --text-muted: #4b5563;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--background);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .frame {
+      width: 1200px;
+      padding: 40px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 28px;
+      padding: 40px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+    }
+
+    /* HEADER */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      font-family: "Press Start 2P", monospace;
+      font-size: 18px;
+      color: var(--primary);
+    }
+
+    .back {
+      font-size: 14px;
+      background: none;
+      border: none;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+
+    /* COURSE GRID */
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .course-card {
+      background: var(--panel);
+      border-radius: 20px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .course-card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: var(--text-dark);
+      font-size: 18px;
+    }
+
+    .course-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .topics {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .topics li {
+      margin-bottom: 6px;
+    }
+
+    .course-card a {
+      align-self: flex-start;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 13px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="frame">
+    <div class="card">
+
+      <div class="header">
+        <div class="logo">STUDYMATES</div>
+        <button class="back" onclick="goBack()">← Dashboard</button>
+      </div>
+
+      <div class="subtitle">
+        Choose a guided learning path. You’ll study each topic in Study Mode.
+      </div>
+
+      <div class="course-grid">
+
+        <!-- CS -->
+        <div class="course-card">
+          <div>
+            <h3>Intro to Computer Science</h3>
+            <p>Build strong fundamentals in computing and problem-solving.</p>
+            <ul class="topics">
+              <li>• Algorithms & Logic</li>
+              <li>• Data & Memory</li>
+              <li>• Operating Systems</li>
+            </ul>
+          </div>
+          <a href="Study_mode.html">Open in Study Mode</a>
+        </div>
+
+        <!-- PYTHON -->
+        <div class="course-card">
+          <div>
+            <h3>Python Programming</h3>
+            <p>Learn Python from beginner concepts to advanced applications.</p>
+            <ul class="topics">
+              <li>• Syntax & Control Flow</li>
+              <li>• OOP & Modules</li>
+              <li>• Automation & Scripts</li>
+            </ul>
+          </div>
+          <a href="Study_mode.html">Open in Study Mode</a>
+        </div>
+
+        <!-- WEB -->
+        <div class="course-card">
+          <div>
+            <h3>Web Development</h3>
+            <p>Create modern web applications using Python and JavaScript.</p>
+            <ul class="topics">
+              <li>• HTML, CSS, JS</li>
+              <li>• Backend with Python</li>
+              <li>• Databases & APIs</li>
+            </ul>
+          </div>
+          <a href="Study_mode.html">Open in Study Mode</a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function goBack() {
+      window.location.href = "Dashboard.html";
+    }
+  </script>
+
+</body>
+</html>
